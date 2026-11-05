@@ -134,8 +134,12 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
-# Environments
+# Environments and Secrets
 .env
+.env.*
+!.env.example
+*.env
+!example.env
 .envrc
 .venv
 env/
@@ -143,6 +147,12 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+*.pem
+*.key
+*.cert
+*.crt
+*credentials*.json
+*secret*.json
 
 # Spyder project settings
 .spyderproject
@@ -208,3 +218,5 @@ __marimo__/
 
 # LangSmith Studio
 **/.langgraph_api/
+
+.DS_Store
